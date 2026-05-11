@@ -1,0 +1,10 @@
+Reflection_QA_PartA.txt
+
+In this practical, I learned how to connect a Node.js application to a Microsoft SQL Server database using the mssql package. 
+I also learned how to create GET and POST API routes and test them using Postman.
+One challenge I faced was configuring SQL Server and understanding where to place the route code inside app.js, but after testing
+ and debugging, I understood how the routes and database connection work together.
+
+I also realised that putting all the database logic directly inside the route handlers makes the code very long and harder to read. 
+If there was a bug in the database operations, it would be easier to isolate and fix the issue if the logic was separated into 
+different functions or files using MVC architecture.

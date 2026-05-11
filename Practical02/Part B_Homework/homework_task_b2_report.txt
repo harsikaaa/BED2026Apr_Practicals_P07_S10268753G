@@ -1,0 +1,7 @@
+So for the foods-api stuff, app.use(express.json()) is basically just the middleware that lets the app read JSON data. If you don't have that, the server just sees a bunch of text and doesn't know how to turn it into a JavaScript object we can actually use.
+
+When it comes to getting data from a request, req.body is what we use to grab the main info from a form or a post, usually for adding new food. req.query is for those bits at the end of a URL, like when you’re filtering by category. Then you have req.params.id, which is how we pinpoint one specific item in the list by its ID so we can update or delete it.
+
+The HTTP methods are just the standard way to handle CRUD. GET is for reading, POST is for creating, PUT is for updating, and DELETE is obviously for removing stuff. Keeping these separate makes the API way more organized and easy for anyone else to understand.
+
+As for the status codes, they’re just quick status updates. 200 OK means it worked, and 201 Created means a new item was successfully added to the database. If the user messes up, like forgetting a field, they get a 400 Bad Request. If they look for a burger that isn't on the menu, they get a 404 Not Found. And if my code just breaks entirely, they’ll see a 500 Internal Server Error.

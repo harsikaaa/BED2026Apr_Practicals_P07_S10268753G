@@ -1,0 +1,15 @@
+1. I refactored the code by separating it into models, controllers, and middleware folders. Database logic was moved to the model, request handling to the controller, and validation to middleware. app.js was used mainly for routes and server setup.
+
+2. One challenge was understanding how the MVC files connect together. I also had some issues with importing and exporting functions correctly.
+
+3. MVC makes adding features easier because each part has its own responsibility. I know exactly where to make changes instead of editing one large file.
+
+4. The MVC version is more organized because the code is separated into smaller files. It is easier to read, debug, and maintain.
+
+5. Separating concerns makes the code cleaner and easier to manage. Models handle database logic while controllers handle requests and responses.
+
+6. Input validation makes the API more reliable by preventing invalid data from being stored. For example, empty title or author fields will return an error.
+
+7. Parameterized queries prevent SQL injection by treating user input as data instead of part of the SQL command. This is safer than string concatenation.
+
+8. Robust error handling improves security by hiding sensitive server or database details from users and attackers.
