@@ -11,7 +11,20 @@ const {
   validateBook,
   validateBookId,
 } = require("./middlewares/bookValidation");
+const userController = require("./controllers/userController");
+app.post("/users", userController.createUser);
 
+app.get("/users", userController.getAllUsers);
+
+app.get("/users/search", userController.searchUsers);
+
+app.get("/users/with-books", userController.getUsersWithBooks);
+
+app.get("/users/:id", userController.getUserById);
+
+app.put("/users/:id", userController.updateUser);
+
+app.delete("/users/:id", userController.deleteUser);
 // Create Express app
 const app = express();
 
