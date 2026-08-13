@@ -13,3 +13,32 @@
 7. Parameterized queries prevent SQL injection by treating user input as data instead of part of the SQL command. This is safer than string concatenation.
 
 8. Robust error handling improves security by hiding sensitive server or database details from users and attackers.
+
+
+# Practical 05 Homework Reflection
+
+## 1. Separation of Concerns
+
+The Model is responsible for communicating with the database and performing operations such as getting, creating, updating, and deleting data. The View is the frontend that users interact with through HTML, CSS, and JavaScript. The Controller handles requests from the View, communicates with the Model, and sends the appropriate response back.
+
+Having a separate frontend View makes the backend API simpler because the backend can focus on handling data and API requests instead of also handling the user interface. The frontend communicates with the API using HTTP requests such as GET, POST, PUT, and DELETE.
+
+## 2. Robustness and Security
+
+I think it became easier to identify and fix data handling and API response problems in Practical 04. The API was separated into models, controllers, and middleware, which made it easier to locate where a problem was occurring. Validation middleware also helped check incoming data before it reached the database.
+
+In Practical 05, the frontend made it easier to see how the API responses were being used by an actual application. This helped connect the backend API functionality with the user interface.
+
+## 3. Challenges and Problem Solving
+
+The most challenging aspect was understanding how the different parts of the MVC structure worked together. At first, it was difficult to understand how requests moved from the frontend to the controller, then to the model and database, and back to the frontend.
+
+I approached the problem by working through each part step by step and checking the existing code. Breaking the functionality into smaller tasks such as GET, POST, PUT, and DELETE made it easier to understand and implement.
+
+If I had to add a new feature such as a genre field to books, the MVC structure would make the process more organized. I could update the database and Model, add the required handling in the Controller and validation middleware, and then update the View to allow users to enter and display the new field. User authentication could similarly be separated into appropriate middleware and controller functionality without putting all the code into one file.
+
+## 4. Experiential Learning
+
+The hands-on coding and refactoring helped me understand MVC, validation, error handling, and parameterized queries better than simply reading about them. Building the different parts showed me how each component has a specific responsibility and how they communicate with each other.
+
+Working with validation and error handling also showed me why APIs need to handle incorrect input and unexpected situations. Using parameterized queries helped demonstrate how data can be safely passed to SQL queries instead of directly inserting user input into SQL statements.
